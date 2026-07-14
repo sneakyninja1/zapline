@@ -206,7 +206,28 @@
   .price-card li{padding:7px 0; display:flex; gap:8px;}
   .price-card li::before{content:'\2713'; color:var(--amber); flex-shrink:0;}
 
-  /* ---- Areas / how it works ---- */
+  /* ---- Pest Library ---- */
+  .pest-grid{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:24px;
+  }
+  @media (max-width:1200px){.pest-grid{grid-template-columns:repeat(4,1fr);}}
+  @media (max-width:760px){.pest-grid{grid-template-columns:repeat(2,1fr);}}
+  .pest-card{
+    background:#fff; border:1px solid var(--line); border-radius:12px;
+    padding:28px 20px; text-align:center; transition:transform .2s, box-shadow .2s;
+  }
+  .pest-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+  }
+  .pest-icon{
+    width:80px; height:80px; margin:0 auto 16px; display:block;
+  }
+  .pest-card h4{
+    font-size:16px; font-weight:600; color:var(--navy);
+  }
+
+  /* ---- Steps ---- */
   .steps{
     display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
   }
@@ -262,7 +283,7 @@
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
+      <a href="#pests">Pests</a>
       <a href="#how">How it works</a>
       <a href="#contact">Contact</a>
     </div>
@@ -333,51 +354,59 @@
   </div>
 </section>
 
-<section id="pricing" class="pricing-band">
+<section id="pests">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">Pricing</span>
-      <h2>Straightforward pricing, no contract required</h2>
-      <p>Pay for a single visit or a full season &mdash; either way, cancel any time.</p>
+      <span class="kicker">Pest Library</span>
+      <h2>Pests we control</h2>
+      <p>Full-spectrum pest management for your home or business.</p>
     </div>
-    <div class="price-grid">
-      <div class="price-card">
-        <div class="plabel">Single treatment</div>
-        <div class="pnum">$200</div>
-        <div class="pnote">One-time outdoor or indoor visit</div>
-        <ul>
-          <li>Full property inspection</li>
-          <li>Targeted treatment</li>
-          <li>Free 2-week follow-up</li>
-        </ul>
+    <div class="pest-grid">
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#8B4513"><circle cx="50" cy="28" r="7"/><ellipse cx="50" cy="45" rx="10" ry="12"/><ellipse cx="50" cy="63" rx="8" ry="11"/><line x1="45" y1="23" x2="38" y2="10" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/><line x1="55" y1="23" x2="62" y2="10" stroke="#8B4513" stroke-width="2" stroke-linecap="round"/><line x1="40" y1="45" x2="22" y2="42" stroke="#8B4513" stroke-width="2"/><line x1="60" y1="45" x2="78" y2="42" stroke="#8B4513" stroke-width="2"/><line x1="40" y1="52" x2="22" y2="58" stroke="#8B4513" stroke-width="2"/><line x1="60" y1="52" x2="78" y2="58" stroke="#8B4513" stroke-width="2"/><line x1="42" y1="72" x2="28" y2="85" stroke="#8B4513" stroke-width="2"/><line x1="58" y1="72" x2="72" y2="85" stroke="#8B4513" stroke-width="2"/></g></svg>
+        <h4>Ants</h4>
       </div>
-      <div class="price-card highlight">
-        <div class="plabel">Seasonal package</div>
-        <div class="pnum">$450</div>
-        <div class="pnote">3 outdoor visits, May&ndash;Oct</div>
-        <ul>
-          <li>Spring, late-summer &amp; fall visits</li>
-          <li>Free follow-ups between visits</li>
-          <li>No annual contract</li>
-        </ul>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#A0522D" stroke="none"><ellipse cx="50" cy="50" rx="24" ry="22"/><circle cx="42" cy="40" r="2" fill="#1a1a1a"/><circle cx="58" cy="40" r="2" fill="#1a1a1a"/><path d="M38 52 L35 65 M38 54 L32 70 M50 60 L50 72 M62 54 L68 70 M62 52 L65 65" stroke="#A0522D" stroke-width="1.5" fill="none" stroke-linecap="round"/></g></svg>
+        <h4>Bed Bugs</h4>
       </div>
-      <div class="price-card">
-        <div class="plabel">First-time customers</div>
-        <div class="pnum">$20 off</div>
-        <div class="pnote">Any first service, any plan</div>
-        <ul>
-          <li>Applies to single or seasonal</li>
-          <li>Ask when you book</li>
-        </ul>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#1a1a1a"><ellipse cx="50" cy="38" rx="12" ry="11"/><ellipse cx="50" cy="58" rx="15" ry="14"/><ellipse cx="50" cy="78" rx="11" ry="10"/><path d="M38 50 Q28 48 22 58" stroke="#1a1a1a" stroke-width="2" fill="none"/><path d="M62 50 Q72 48 78 58" stroke="#1a1a1a" stroke-width="2" fill="none"/><ellipse cx="42" cy="48" rx="8" ry="5" fill="none" stroke="#1a1a1a" stroke-width="1.5" opacity="0.6"/><ellipse cx="58" cy="48" rx="8" ry="5" fill="none" stroke="#1a1a1a" stroke-width="1.5" opacity="0.6"/></g></svg>
+        <h4>Beetles</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#4A4A4A"><ellipse cx="50" cy="50" rx="14" ry="12"/><circle cx="50" cy="32" r="8"/><circle cx="48" cy="30" r="1.5" fill="#1a1a1a"/><circle cx="52" cy="30" r="1.5" fill="#1a1a1a"/><path d="M40 38 Q28 28 22 18" stroke="#4A4A4A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M60 38 Q72 28 78 18" stroke="#4A4A4A" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M38 52 Q25 55 18 68" stroke="#4A4A4A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M62 52 Q75 55 82 68" stroke="#4A4A4A" stroke-width="2" fill="none" stroke-linecap="round"/><line x1="45" y1="62" x2="42" y2="80" stroke="#4A4A4A" stroke-width="2"/><line x1="55" y1="62" x2="58" y2="80" stroke="#4A4A4A" stroke-width="2"/></g></svg>
+        <h4>Biting Flies</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#2a2a2a"><ellipse cx="50" cy="32" rx="14" ry="12"/><ellipse cx="50" cy="50" rx="18" ry="16"/><ellipse cx="50" cy="68" rx="16" ry="14"/><line x1="36" y1="28" x2="25" y2="12" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/><line x1="64" y1="28" x2="75" y2="12" stroke="#2a2a2a" stroke-width="2.5" stroke-linecap="round"/><line x1="32" y1="48" x2="12" y2="42" stroke="#2a2a2a" stroke-width="2"/><line x1="68" y1="48" x2="88" y2="42" stroke="#2a2a2a" stroke-width="2"/><line x1="32" y1="55" x2="12" y2="62" stroke="#2a2a2a" stroke-width="2"/><line x1="68" y1="55" x2="88" y2="62" stroke="#2a2a2a" stroke-width="2"/><line x1="38" y1="80" x2="25" y2="92" stroke="#2a2a2a" stroke-width="2"/><line x1="62" y1="80" x2="75" y2="92" stroke="#2a2a2a" stroke-width="2"/></g></svg>
+        <h4>Cockroaches</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#8B7355"><ellipse cx="50" cy="52" rx="16" ry="14"/><circle cx="50" cy="32" r="9"/><circle cx="47" cy="29" r="1.5" fill="#1a1a1a"/><circle cx="53" cy="29" r="1.5" fill="#1a1a1a"/><path d="M50 40 L48 48 L50 50 L52 48 Z" fill="#000"/><path d="M38 45 Q25 38 20 25" stroke="#8B7355" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M62 45 Q75 38 80 25" stroke="#8B7355" stroke-width="2.5" fill="none" stroke-linecap="round"/><line x1="38" y1="62" x2="28" y2="78" stroke="#8B7355" stroke-width="2"/><line x1="62" y1="62" x2="72" y2="78" stroke="#8B7355" stroke-width="2"/><line x1="45" y1="65" x2="42" y2="82" stroke="#8B7355" stroke-width="2"/><line x1="55" y1="65" x2="58" y2="82" stroke="#8B7355" stroke-width="2"/></g></svg>
+        <h4>Mosquitoes</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#3a3a3a"><ellipse cx="50" cy="38" rx="14" ry="12"/><ellipse cx="50" cy="58" rx="18" ry="16"/><ellipse cx="50" cy="78" rx="14" ry="11"/><path d="M38 32 Q32 20 28 10" stroke="#3a3a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M62 32 Q68 20 72 10" stroke="#3a3a3a" stroke-width="2.5" fill="none" stroke-linecap="round"/><ellipse cx="42" cy="48" rx="7" ry="5" fill="none" stroke="#3a3a3a" stroke-width="1.5" opacity="0.7"/><ellipse cx="58" cy="48" rx="7" ry="5" fill="none" stroke="#3a3a3a" stroke-width="1.5" opacity="0.7"/><path d="M36 60 Q24 58 16 68" stroke="#3a3a3a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M64 60 Q76 58 84 68" stroke="#3a3a3a" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg>
+        <h4>Moths</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#8B7D6B"><ellipse cx="50" cy="60" rx="22" ry="20"/><circle cx="50" cy="32" r="13"/><circle cx="42" cy="18" r="7" fill="#8B7D6B"/><circle cx="58" cy="18" r="7" fill="#8B7D6B"/><circle cx="46" cy="28" r="3" fill="#1a1a1a"/><circle cx="54" cy="28" r="3" fill="#1a1a1a"/><ellipse cx="50" cy="36" rx="4" ry="5" fill="#CD5C5C"/><path d="M38 32 L22 30 M38 35 L20 35 M38 38 L22 40" stroke="#8B7D6B" stroke-width="2" stroke-linecap="round"/><path d="M68 70 Q75 80 78 92" stroke="#8B7D6B" stroke-width="3" fill="none" stroke-linecap="round"/></g></svg>
+        <h4>Rodents</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#2a2a2a"><circle cx="50" cy="45" r="14"/><line x1="45" y1="30" x2="40" y2="12" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/><line x1="55" y1="30" x2="60" y2="12" stroke="#2a2a2a" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="60" x2="48" y2="78" stroke="#2a2a2a" stroke-width="2"/><line x1="50" y1="60" x2="52" y2="78" stroke="#2a2a2a" stroke-width="2"/><path d="M35 40 Q22 38 16 45" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M65 40 Q78 38 84 45" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M35 50 Q22 50 16 58" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M65 50 Q78 50 84 58" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/></g></svg>
+        <h4>Spiders</h4>
+      </div>
+      <div class="pest-card">
+        <svg viewBox="0 0 100 100" class="pest-icon"><g fill="#2a2a2a"><circle cx="50" cy="30" r="8"/><ellipse cx="50" cy="48" rx="10" ry="12"/><ellipse cx="50" cy="68" rx="8" ry="14"/><line x1="50" y1="40" x2="50" y2="56" stroke="#FFD700" stroke-width="2" opacity="0.8"/><path d="M35 45 Q20 40 15 50" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M65 45 Q80 40 85 50" stroke="#2a2a2a" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="48" cy="28" r="1.5" fill="#1a1a1a"/><circle cx="52" cy="28" r="1.5" fill="#1a1a1a"/><line x1="45" y1="22" x2="42" y2="10" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/><line x1="55" y1="22" x2="58" y2="10" stroke="#2a2a2a" stroke-width="1.5" stroke-linecap="round"/></g></svg>
+        <h4>Wasps</h4>
       </div>
     </div>
   </div>
 </section>
 
 <section id="how">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="kicker">How it works</span>
       <h2>Three steps, first visit usually within days</h2>
     </div>
     <div class="steps">
